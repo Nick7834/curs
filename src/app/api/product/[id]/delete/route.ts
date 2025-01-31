@@ -10,6 +10,8 @@ export async function DELETE(request: Request, { params }: { params: Promise<{ i
     }
 
     try {
+        await prisma.cartItem.deleteMany({ where: { id: idProduct.id } });
+
         const response = await prisma.product.delete({ where: { id: idProduct.id } });
         return NextResponse.json({ response });
     } catch (error) {

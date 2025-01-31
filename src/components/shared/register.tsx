@@ -33,7 +33,7 @@ export const Register: React.FC<Props> = ({setOpen}) => {
          });
  
          if(!resp?.ok) {
-             toast.error(resp?.error);
+            toast.error("Не удалось войти в систему");
              return;
          } 
  

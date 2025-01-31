@@ -23,7 +23,7 @@ export const Login: React.FC<Props> = ({setOpen}) => {
                 redirect: false 
             });
             if(!resp?.ok) {
-                toast.error(resp?.error);
+                toast.error("Не удалось войти в систему");
                 return;
             } 
             toast.success("Успешный вход в систему");
