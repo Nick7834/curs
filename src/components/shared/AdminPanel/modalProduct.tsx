@@ -163,7 +163,6 @@ export const ModalProduct: React.FC<Props> = ({ open, onClose, editProduct }) =>
         setLoading(true);
         try {
             const response = await axios.delete(`/api/product/${id}/delete`);
-    
             if (response.status === 200) {
                 toast.success('Товар успешно удален.');
                 deleteProduct(id);
